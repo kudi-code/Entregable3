@@ -6,9 +6,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(66, 66, 66);
@@ -66,7 +64,7 @@ body {
   color: black;
 }
 .Info{
-  width: 70vw;
+  width: 80vw;
   margin: 0 auto;
 }
 
@@ -86,7 +84,7 @@ body {
   flex-direction: row;
   margin: 15px auto;
   padding-left: 6vw;
-  width: 50vw;
+  width: 60vw;
   justify-content: space-between;
 
 }
@@ -94,20 +92,44 @@ body {
 .residentList{
   background-color: rgb(1, 5, 46);
   color: white;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 150px 150px 150px;
+    /* 3 columnas de 100px c/u */
+    /* y 3 filas de 100px c/u */
+
+    gap: .8rem;
+    /* Se aplica un padding entre los elementos */
+
+    grid-auto-rows: 200px;
+    /* Todos los que se vayan agregando se estilan automáticamente */
+    padding-top: 10px;
 
 }
 .residentInfo{
-
-}
-.residentInfo img{
-  width: 100px;
-  height: 100px;
+  /**/
 }
 
+.card{
+  background-color: rgb(15, 94, 94);
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
 
+align-items: center;
+
+}
+
+.card img{
+  height: 123px;
+  border-radius: 15px;
+}
+
+.card--text{
+  text-align: left;
+  padding: 10px 15px 10px 30px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
